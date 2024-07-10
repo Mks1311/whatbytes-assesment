@@ -51,7 +51,6 @@ export default function SideNavBar({ }: Props) {
                 </div>
             }
 
-
             <Nav
                 isCollapsed={mobileWidth ? true : isCollapsed}
                 links={[

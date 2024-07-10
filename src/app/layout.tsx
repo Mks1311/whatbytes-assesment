@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SideNavBar from "@/components/SideNavBar";
 import Header from "@/components/Header";
+import { Providers } from "../../GlobalRedux/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen w-full bg-white text-black">
-        <Header/>
-        <div className="flex min-h-screen w-full">
-        <SideNavBar/>
-        <div className="w-full p-8">{children}</div>
-        </div>
-        
+        <Providers>
+          <Header />
+          <div className="flex min-h-screen w-full">
+
+            <SideNavBar />
+            <div className="w-full p-8">{children}</div>
+          </div>
+        </Providers>
       </body>
-    </html>
+    </html >
   );
 }
