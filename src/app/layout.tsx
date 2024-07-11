@@ -25,7 +25,7 @@ export default function RootLayout({
           <div className="flex min-h-screen w-full">
 
             <SideNavBar />
-            <div className="w-full p-8">{children}</div>
+            <div className="w-full p-1">{children}</div>
           </div>
         </Providers>
       </body>
